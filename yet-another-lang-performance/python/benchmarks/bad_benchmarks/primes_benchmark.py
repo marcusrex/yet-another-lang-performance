@@ -3,7 +3,7 @@ from benchmarks.benchmark import Benchmark
 
 class PrimesBenchmark(Benchmark):
 
-    prime_number = 10
+    primes_number = 10
 
     @staticmethod
     def __get_primes7(n: int):
@@ -37,5 +37,5 @@ class PrimesBenchmark(Benchmark):
         self.primes_number = primes_number
         super().__init__("Bad Primes Benchmark")
 
-    def execute(self):
-        self.__get_primes7(self.prime_number)
+    def _execute_impl(self):
+        self.__get_primes7(self.primes_number)
