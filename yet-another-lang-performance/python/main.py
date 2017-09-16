@@ -22,7 +22,8 @@ alternative_benchmarks = BenchmarkCollection("Alternative benchmarks", [
 
 
 def print_results(results: list):
-    print(tabulate(map(lambda r: r.as_list(), results), headers=['Name', 'Avg. elapsed time (s)', "Runs number"]))
+    print(tabulate(map(lambda r: r.as_list(), results),
+                   headers=['Name', 'Avg. elapsed time (s)', 'Avg max used memory (MB)', "Runs number"]))
 
 
 if __name__ == "__main__":

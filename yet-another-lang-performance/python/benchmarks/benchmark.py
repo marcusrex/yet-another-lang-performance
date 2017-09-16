@@ -1,5 +1,7 @@
 import time
 
+from memory_profiler import memory_usage
+
 from benchmarks.benchmark_stat import BenchmarkStat
 from benchmarks.constants import RETRY_NUMBER
 
@@ -23,4 +25,10 @@ class Benchmark:
             self._execute_impl()
             end = time.perf_counter()
             times.append(end - start)
-        return BenchmarkStat(self.name, sum(times) / RETRY_NUMBER, RETRY_NUMBER)
+
+        memories = []
+
+        for _ in range(RETRY_NUMBER):
+            memories.append(max(memory_usage((self._execute_impl,))))
+
+        return BenchmarkStat(self.name, sum(times) / RETRY_NUMBER, sum(memories) / RETRY_NUMBER, RETRY_NUMBER)
