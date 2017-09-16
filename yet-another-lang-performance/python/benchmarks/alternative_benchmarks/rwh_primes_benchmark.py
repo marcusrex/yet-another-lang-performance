@@ -18,5 +18,8 @@ class RwhPrimesBenchmark(Benchmark):
         self.primes_number = primes_number
         super().__init__("RWH primes basic")
 
+    def get_hidden_result(self):
+        return self.__primes(self.primes_number)
+
     def _execute_impl(self):
         self.__primes(self.primes_number)

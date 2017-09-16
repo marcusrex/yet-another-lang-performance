@@ -39,3 +39,6 @@ class PrimesBenchmark(Benchmark):
 
     def _execute_impl(self):
         self.__get_primes7(self.primes_number)
+
+    def get_hidden_result(self):
+        return self.__get_primes7(self.primes_number)

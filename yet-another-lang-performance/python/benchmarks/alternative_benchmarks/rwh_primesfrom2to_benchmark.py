@@ -22,5 +22,8 @@ class RwhPrimesFrom2toBenchmark(Benchmark):
         self.primes_number = primes_number
         super().__init__("RWH primesfrom2")
 
+    def get_hidden_result(self):
+        return self.__primesfrom2to(self.primes_number).tolist()
+
     def _execute_impl(self):
         self.__primesfrom2to(self.primes_number)

@@ -13,6 +13,9 @@ class Benchmark:
     def _execute_impl(self):
         raise NotImplemented()
 
+    def get_hidden_result(self):
+        pass
+
     def execute(self) -> BenchmarkStat:
         times = []
         for _ in range(RETRY_NUMBER):
