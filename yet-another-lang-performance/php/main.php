@@ -5,7 +5,8 @@
 
     function print_results($results){
         foreach($results as $result){
-            echo sprintf("Benchmark: %s Avg. elapsled time: %f Runs: %d", $result->name, $result->avg_elapsed_time, $result->run_number);
+            echo sprintf("Benchmark: %s Avg. elapsed time: %f Used mem: %d Avg Total Memory: %d Runs: %d",
+             $result->name, $result->avg_elapsed_time, $result->used_mem, $result->total_used_mem, $result->run_number);
         }
     }
 

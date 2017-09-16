@@ -42,7 +42,7 @@
         }
         
         protected function execute_impl(){
-            $this->get_primes7(self::MAX_PRIME);
+            return $this->get_primes7(self::MAX_PRIME);
         }
     }
     
