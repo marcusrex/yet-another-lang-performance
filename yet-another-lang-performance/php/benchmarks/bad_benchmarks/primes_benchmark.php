@@ -1,6 +1,6 @@
 <?php
     namespace Benchmarks\BadBenchmarks;
-    include dirname(__FILE__).'/../benchmark.php';
+    require_once(dirname(__FILE__).'/../benchmark.php');
 
     use Benchmarks\Benchmark;
 

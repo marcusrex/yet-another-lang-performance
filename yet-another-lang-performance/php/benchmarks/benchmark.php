@@ -20,7 +20,7 @@
     abstract class Benchmark {
         protected $name;
 
-        const RETRY_NUMBER = 100;
+        const RETRY_NUMBER = 1;
 
         function __construct($name) {
                 $this->name = $name;
